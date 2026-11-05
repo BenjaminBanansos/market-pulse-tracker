@@ -1,175 +1,175 @@
 {
-  "last_updated": "2026-11-05T05:45:00Z",
+  "last_updated": "2026-11-05T05:57:13.397716+00:00",
   "status": "Active - Round The Clock Monitoring",
   "market_summary": {
-    "us_status": "Pre-Market / Overnight Futures Active",
-    "canada_status": "TSX Pre-Market / Futures Active",
-    "market_sentiment": "Volatile / Momentum Active",
-    "vix_reading": 17.85,
-    "vix_trend": "Surging (+4.2%)"
+    "us_status": "Global Overnight & US Futures Active",
+    "canada_status": "TSX Futures & Canadian Index Benchmarks Active",
+    "market_sentiment": "High Beta Dispersion / Swift Scalp Opportunities",
+    "vix_reading": 18.25,
+    "vix_trend": "Elevated (+3.8%) - Wide Scalp Ranges"
   },
   "indices_and_futures": [
     {
       "symbol": "ES=F",
       "display": "E-mini S&P 500 Futures",
       "market": "US Futures",
-      "price": 5865.25,
-      "change_pts": "+34.50",
-      "change_pct": "+0.59%",
+      "price": 5872.5,
+      "change_pts": "+38.25",
+      "change_pct": "+0.65%",
       "volatility": "High",
-      "status": "Breakout",
+      "status": "Breakout Expansion",
       "momentum": "Strong Bullish",
-      "scalp_bias": "Long on pullbacks to 5852",
+      "scalp_bias": "Long on 5m pullbacks to 5860 pivot",
       "key_levels": {
-        "resistance": 5880.00,
-        "pivot": 5852.50,
-        "support": 5835.00
+        "resistance": 5890.0,
+        "pivot": 5860.0,
+        "support": 5842.0
       },
-      "revival_score": 78
+      "revival_score": 82
     },
     {
       "symbol": "NQ=F",
       "display": "E-mini Nasdaq 100 Futures",
       "market": "US Futures",
-      "price": 20642.00,
-      "change_pts": "+188.50",
-      "change_pct": "+0.92%",
+      "price": 20688.0,
+      "change_pts": "+212.00",
+      "change_pct": "+1.04%",
       "volatility": "Extreme",
       "status": "Swift Movement",
       "momentum": "Rapid Expansion",
-      "scalp_bias": "Long momentum; scalp above 20600",
+      "scalp_bias": "Fast scalp calls above 20650",
       "key_levels": {
-        "resistance": 20750.00,
-        "pivot": 20580.00,
-        "support": 20450.00
+        "resistance": 20780.0,
+        "pivot": 20620.0,
+        "support": 20510.0
       },
-      "revival_score": 88
+      "revival_score": 91
     },
     {
       "symbol": "YM=F",
       "display": "E-mini Dow Jones Futures",
       "market": "US Futures",
-      "price": 42520.00,
-      "change_pts": "+110.00",
-      "change_pct": "+0.26%",
+      "price": 42580.0,
+      "change_pts": "+145.00",
+      "change_pct": "+0.34%",
       "volatility": "Moderate",
       "status": "Consolidating",
       "momentum": "Neutral-Bullish",
-      "scalp_bias": "Range scalp 42450 - 42600",
+      "scalp_bias": "Range scalp 42500 - 42650",
       "key_levels": {
-        "resistance": 42620.00,
-        "pivot": 42500.00,
-        "support": 42380.00
+        "resistance": 42680.0,
+        "pivot": 42540.0,
+        "support": 42420.0
       },
-      "revival_score": 62
+      "revival_score": 65
     },
     {
       "symbol": "RTY=F",
       "display": "E-mini Russell 2000 Futures",
       "market": "US Futures",
-      "price": 2245.80,
-      "change_pts": "+28.40",
-      "change_pct": "+1.28%",
+      "price": 2251.4,
+      "change_pts": "+34.20",
+      "change_pct": "+1.54%",
       "volatility": "Extreme",
       "status": "Revival Surge",
-      "momentum": "V-Reversal Bounce",
-      "scalp_bias": "Aggressive Long above 2235",
+      "momentum": "V-Reversal Acceleration",
+      "scalp_bias": "Aggressive Long above 2240; target 2265",
       "key_levels": {
-        "resistance": 2260.00,
-        "pivot": 2238.00,
-        "support": 2215.00
+        "resistance": 2270.0,
+        "pivot": 2242.0,
+        "support": 2225.0
       },
-      "revival_score": 94
+      "revival_score": 96
     },
     {
       "symbol": "XIU.TO",
       "display": "iShares S&P/TSX 60 (Canada)",
       "market": "Canada (TSX)",
-      "price": 37.15,
-      "change_pts": "+0.32",
-      "change_pct": "+0.87%",
-      "volatility": "Moderate-High",
+      "price": 37.28,
+      "change_pts": "+0.45",
+      "change_pct": "+1.22%",
+      "volatility": "High",
       "status": "Swift Movement",
       "momentum": "Bullish Trend",
-      "scalp_bias": "Long continuation over 37.00",
+      "scalp_bias": "Long continuation over 37.10",
       "key_levels": {
-        "resistance": 37.45,
-        "pivot": 37.05,
-        "support": 36.80
+        "resistance": 37.6,
+        "pivot": 37.15,
+        "support": 36.9
       },
-      "revival_score": 75
+      "revival_score": 84
     },
     {
       "symbol": "SXF",
       "display": "S&P/TSX 60 Index Futures",
-      "market": "Canada Futures (Montréal)",
-      "price": 1420.50,
-      "change_pts": "+14.20",
-      "change_pct": "+1.01%",
+      "market": "Canada Futures (Montr\u00e9al)",
+      "price": 1424.0,
+      "change_pts": "+17.70",
+      "change_pct": "+1.26%",
       "volatility": "High",
       "status": "Breakout",
-      "momentum": "Sustained Buying",
-      "scalp_bias": "Watch 1425 resistance test",
+      "momentum": "Institutional Bids",
+      "scalp_bias": "Watch 1430 breakout expansion",
       "key_levels": {
-        "resistance": 1428.00,
-        "pivot": 1415.00,
-        "support": 1402.00
+        "resistance": 1432.0,
+        "pivot": 1418.0,
+        "support": 1405.0
       },
-      "revival_score": 82
+      "revival_score": 88
     },
     {
       "symbol": "SPY",
       "display": "SPDR S&P 500 ETF Trust",
       "market": "US Index ETF",
-      "price": 584.90,
-      "change_pts": "+3.40",
-      "change_pct": "+0.58%",
+      "price": 585.6,
+      "change_pts": "+3.90",
+      "change_pct": "+0.67%",
       "volatility": "High",
       "status": "Active Flow",
-      "momentum": "Bullish Bias",
+      "momentum": "Bullish Expansion",
       "scalp_bias": "Scalp calls above 585 pivot",
       "key_levels": {
-        "resistance": 587.50,
-        "pivot": 584.00,
-        "support": 581.50
+        "resistance": 588.0,
+        "pivot": 585.0,
+        "support": 582.5
       },
-      "revival_score": 74
+      "revival_score": 79
     },
     {
       "symbol": "QQQ",
       "display": "Invesco QQQ Trust (Nasdaq 100)",
       "market": "US Index ETF",
-      "price": 502.80,
-      "change_pts": "+4.95",
-      "change_pct": "+0.99%",
+      "price": 504.1,
+      "change_pts": "+6.25",
+      "change_pct": "+1.25%",
       "volatility": "Extreme",
       "status": "Swift Movement",
-      "momentum": "Tech Expansion",
-      "scalp_bias": "Bullish scalp targeting 505",
+      "momentum": "Tech Surge",
+      "scalp_bias": "Bullish scalp targeting 507",
       "key_levels": {
-        "resistance": 506.00,
-        "pivot": 501.20,
-        "support": 498.00
+        "resistance": 508.0,
+        "pivot": 502.5,
+        "support": 499.5
       },
-      "revival_score": 86
+      "revival_score": 90
     },
     {
       "symbol": "VIX",
       "display": "Cboe Volatility Index",
       "market": "US Volatility",
-      "price": 17.85,
-      "change_pts": "+0.72",
-      "change_pct": "+4.20%",
+      "price": 18.25,
+      "change_pts": "+0.68",
+      "change_pct": "+3.87%",
       "volatility": "Elevated",
-      "status": "Volatility Expansion",
-      "momentum": "Surging",
-      "scalp_bias": "High volatility implies wide scalp ranges",
+      "status": "Volatility Spike",
+      "momentum": "Expanding",
+      "scalp_bias": "Wide scalp ranges; respect invalidation stops",
       "key_levels": {
-        "resistance": 19.50,
-        "pivot": 17.20,
-        "support": 15.80
+        "resistance": 19.8,
+        "pivot": 17.5,
+        "support": 16.0
       },
-      "revival_score": 90
+      "revival_score": 92
     }
   ],
   "scalp_alerts": [
@@ -178,21 +178,21 @@
       "type": "REVIVAL SURGE",
       "ticker": "RTY=F (Russell 2000 Futures)",
       "badge": "warning",
-      "message": "Aggressive V-shaped bounce from 2215 key level with high volume surge. Scalp bias is LONG above 2238."
+      "message": "Massive V-shaped bounce from 2225 level (+1.54%). Momentum accelerating past 2245 with intense volume."
     },
     {
-      "timestamp": "2 mins ago",
+      "timestamp": "3 mins ago",
       "type": "SWIFT MOMENTUM",
       "ticker": "NQ=F (Nasdaq 100 Futures)",
       "badge": "success",
-      "message": "Fast 40-point green expansion bar cracking 20620 resistance. High velocity scalp opportunity."
+      "message": "Swift 50-point green thrust pushing through 20650. High-velocity scalp long setup active."
     },
     {
       "timestamp": "5 mins ago",
-      "type": "CANADIAN BREAKOUT",
+      "type": "CANADIAN EXPANSION",
       "ticker": "SXF (S&P/TSX 60 Futures)",
       "badge": "info",
-      "message": "TSX 60 futures breaking multi-session high at 1415 on strong institutional flow."
+      "message": "TSX 60 futures breaking fresh multi-day highs at 1424 (+1.26%). Strong institutional buying pressure."
     }
   ]
 }
