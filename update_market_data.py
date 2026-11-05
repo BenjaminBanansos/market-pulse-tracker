@@ -18,9 +18,10 @@ def update_data(payload):
     print(f"Successfully updated {DATA_PATH} at {payload['last_updated']}")
 
 if __name__ == "__main__":
-    if len(sys.argv) > 1 and os.path.exists(sys.argv[1]):
-        with open(sys.argv[1], "r", encoding="utf-8") as f:
+    target_path = sys.argv[1] if (len(sys.argv) > 1 and os.path.exists(sys.argv[1])) else DATA_PATH
+    if os.path.exists(target_path):
+        with open(target_path, "r", encoding="utf-8") as f:
             data = json.load(f)
-            update_data(data)
+        update_data(data)
     else:
-        print("Usage: python3 update_market_data.py [data_file.json]")
+        print(f"Data file not found at {target_path}")
