@@ -1,4 +1,5 @@
 deploy_to_github.py
 deploy_to_github.sh
+deploy_to_github.command
 *.pyc
 __pycache__/
