@@ -1,0 +1,3 @@
+deploy_to_github.py
+*.pyc
+__pycache__/
