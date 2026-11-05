@@ -1,0 +1,793 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>PulseTrade | US & Canada Fast-Move & Scalping Radar</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=JetBrains+Mono:wght@400;500;700;800&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --bg: #090d16;
+      --card-bg: rgba(18, 24, 38, 0.85);
+      --card-border: rgba(255, 255, 255, 0.08);
+      --card-hover: rgba(30, 41, 59, 0.9);
+      --text-main: #f1f5f9;
+      --text-muted: #94a3b8;
+      --green: #10b981;
+      --green-glow: rgba(16, 185, 129, 0.25);
+      --red: #ef4444;
+      --red-glow: rgba(239, 68, 68, 0.25);
+      --cyan: #06b6d4;
+      --cyan-glow: rgba(6, 182, 212, 0.25);
+      --gold: #f59e0b;
+      --accent: #6366f1;
+    }
+
+    * {
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+    }
+
+    body {
+      background-color: var(--bg);
+      color: var(--text-main);
+      font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+      min-height: 100vh;
+      overflow-x: hidden;
+      background-image: 
+        radial-gradient(circle at 15% 10%, rgba(99, 102, 241, 0.12) 0%, transparent 40%),
+        radial-gradient(circle at 85% 80%, rgba(16, 185, 129, 0.08) 0%, transparent 40%);
+    }
+
+    /* Top Navigation */
+    header {
+      border-bottom: 1px solid var(--card-border);
+      background: rgba(9, 13, 22, 0.92);
+      backdrop-filter: blur(12px);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+      padding: 0.85rem 1.75rem;
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+
+    .brand {
+      display: flex;
+      align-items: center;
+      gap: 0.75rem;
+    }
+
+    .brand-logo {
+      width: 34px;
+      height: 34px;
+      background: linear-gradient(135deg, #06b6d4, #6366f1);
+      border-radius: 8px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      font-weight: 800;
+      font-family: 'JetBrains Mono', monospace;
+      color: #fff;
+      font-size: 1.1rem;
+      box-shadow: 0 0 15px rgba(6, 182, 212, 0.4);
+    }
+
+    .brand h1 {
+      font-size: 1.2rem;
+      font-weight: 700;
+      letter-spacing: -0.02em;
+    }
+
+    .brand span {
+      color: var(--cyan);
+    }
+
+    .status-badge-container {
+      display: flex;
+      align-items: center;
+      gap: 1.25rem;
+    }
+
+    .live-indicator {
+      display: flex;
+      align-items: center;
+      gap: 0.5rem;
+      background: rgba(16, 185, 129, 0.12);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+      padding: 0.35rem 0.85rem;
+      border-radius: 9999px;
+      font-size: 0.75rem;
+      font-family: 'JetBrains Mono', monospace;
+      color: var(--green);
+      font-weight: 600;
+    }
+
+    .pulse-dot {
+      width: 8px;
+      height: 8px;
+      background: var(--green);
+      border-radius: 50%;
+      box-shadow: 0 0 8px var(--green);
+      animation: pulse 1.6s infinite ease-in-out;
+    }
+
+    @keyframes pulse {
+      0%, 100% { opacity: 1; transform: scale(1); }
+      50% { opacity: 0.4; transform: scale(1.3); }
+    }
+
+    .timestamp {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Container */
+    .container {
+      max-width: 1440px;
+      margin: 0 auto;
+      padding: 1.75rem;
+    }
+
+    /* Market Pulse Ticker Ribbon */
+    .ticker-bar {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 0.85rem;
+      margin-bottom: 1.5rem;
+    }
+
+    .ticker-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 10px;
+      padding: 0.85rem 1rem;
+      backdrop-filter: blur(8px);
+      transition: all 0.2s ease;
+      cursor: pointer;
+    }
+
+    .ticker-card:hover {
+      border-color: var(--cyan);
+      transform: translateY(-2px);
+      box-shadow: 0 6px 20px rgba(0, 0, 0, 0.3);
+    }
+
+    .ticker-top {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 0.4rem;
+    }
+
+    .ticker-symbol {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 0.95rem;
+    }
+
+    .ticker-region {
+      font-size: 0.65rem;
+      text-transform: uppercase;
+      padding: 0.15rem 0.4rem;
+      border-radius: 4px;
+      background: rgba(255, 255, 255, 0.06);
+      color: var(--text-muted);
+      font-weight: 600;
+    }
+
+    .ticker-price {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 1.2rem;
+      font-weight: 700;
+    }
+
+    .ticker-change {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.8rem;
+      font-weight: 600;
+      display: flex;
+      align-items: center;
+      gap: 0.25rem;
+      margin-top: 0.2rem;
+    }
+
+    .change-pos {
+      color: var(--green);
+    }
+
+    .change-neg {
+      color: var(--red);
+    }
+
+    /* Top Grid: VIX & Real-time alerts */
+    .top-grid {
+      display: grid;
+      grid-template-columns: 2fr 1fr;
+      gap: 1.25rem;
+      margin-bottom: 1.75rem;
+    }
+
+    @media (max-width: 960px) {
+      .top-grid {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    .panel {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      padding: 1.25rem;
+      backdrop-filter: blur(12px);
+    }
+
+    .panel-header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      margin-bottom: 1.1rem;
+      padding-bottom: 0.75rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    .panel-title {
+      font-size: 0.95rem;
+      font-weight: 700;
+      letter-spacing: -0.01em;
+      display: flex;
+      align-items: center;
+      gap: 0.6rem;
+    }
+
+    .panel-title svg {
+      width: 18px;
+      height: 18px;
+      color: var(--cyan);
+    }
+
+    /* Scalping & Revival Alert Feed */
+    .alerts-feed {
+      display: flex;
+      flex-direction: column;
+      gap: 0.75rem;
+      max-height: 250px;
+      overflow-y: auto;
+    }
+
+    .alert-item {
+      display: flex;
+      align-items: flex-start;
+      gap: 0.85rem;
+      padding: 0.75rem 0.9rem;
+      background: rgba(15, 23, 42, 0.6);
+      border: 1px solid var(--card-border);
+      border-radius: 8px;
+      border-left: 3px solid var(--cyan);
+      transition: background 0.2s;
+    }
+
+    .alert-item.warning {
+      border-left-color: var(--gold);
+    }
+
+    .alert-item.success {
+      border-left-color: var(--green);
+    }
+
+    .alert-item.danger {
+      border-left-color: var(--red);
+    }
+
+    .alert-badge {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.65rem;
+      font-weight: 700;
+      padding: 0.2rem 0.5rem;
+      border-radius: 4px;
+      text-transform: uppercase;
+      white-space: nowrap;
+    }
+
+    .badge-warning {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--gold);
+    }
+
+    .badge-success {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--green);
+    }
+
+    .badge-info {
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--cyan);
+    }
+
+    .alert-body {
+      flex: 1;
+    }
+
+    .alert-headline {
+      font-size: 0.82rem;
+      font-weight: 600;
+      margin-bottom: 0.2rem;
+      display: flex;
+      justify-content: space-between;
+    }
+
+    .alert-time {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .alert-desc {
+      font-size: 0.78rem;
+      color: var(--text-muted);
+      line-height: 1.35;
+    }
+
+    /* Volatility Status Box */
+    .vol-box {
+      display: flex;
+      flex-direction: column;
+      gap: 1rem;
+    }
+
+    .vix-display {
+      display: flex;
+      align-items: baseline;
+      gap: 0.75rem;
+    }
+
+    .vix-val {
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 2.5rem;
+      font-weight: 800;
+      color: var(--gold);
+      text-shadow: 0 0 15px rgba(245, 158, 11, 0.3);
+    }
+
+    .vix-status {
+      font-size: 0.85rem;
+      font-weight: 600;
+      color: var(--text-muted);
+    }
+
+    .vol-meter-bg {
+      height: 8px;
+      background: rgba(255, 255, 255, 0.08);
+      border-radius: 9999px;
+      overflow: hidden;
+      position: relative;
+    }
+
+    .vol-meter-fill {
+      height: 100%;
+      width: 65%;
+      background: linear-gradient(90deg, var(--green), var(--gold), var(--red));
+      border-radius: 9999px;
+    }
+
+    .vol-summary-row {
+      display: flex;
+      justify-content: space-between;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    /* Full Data Matrix Table */
+    .table-container {
+      overflow-x: auto;
+      border-radius: 10px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      font-size: 0.85rem;
+      text-align: left;
+    }
+
+    th {
+      background: rgba(15, 23, 42, 0.9);
+      color: var(--text-muted);
+      font-family: 'JetBrains Mono', monospace;
+      font-size: 0.72rem;
+      text-transform: uppercase;
+      letter-spacing: 0.05em;
+      padding: 0.85rem 1rem;
+      border-bottom: 1px solid var(--card-border);
+    }
+
+    td {
+      padding: 0.9rem 1rem;
+      border-bottom: 1px solid rgba(255, 255, 255, 0.04);
+      vertical-align: middle;
+    }
+
+    tr:hover td {
+      background: rgba(255, 255, 255, 0.02);
+    }
+
+    .sym-cell {
+      display: flex;
+      flex-direction: column;
+    }
+
+    .sym-code {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 700;
+      font-size: 0.95rem;
+      color: #fff;
+    }
+
+    .sym-name {
+      font-size: 0.72rem;
+      color: var(--text-muted);
+    }
+
+    .mono-cell {
+      font-family: 'JetBrains Mono', monospace;
+      font-weight: 600;
+    }
+
+    .tag {
+      display: inline-block;
+      padding: 0.25rem 0.55rem;
+      border-radius: 6px;
+      font-size: 0.7rem;
+      font-weight: 600;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .tag-breakout {
+      background: rgba(16, 185, 129, 0.15);
+      color: var(--green);
+      border: 1px solid rgba(16, 185, 129, 0.3);
+    }
+
+    .tag-revival {
+      background: rgba(245, 158, 11, 0.15);
+      color: var(--gold);
+      border: 1px solid rgba(245, 158, 11, 0.3);
+    }
+
+    .tag-swift {
+      background: rgba(6, 182, 212, 0.15);
+      color: var(--cyan);
+      border: 1px solid rgba(6, 182, 212, 0.3);
+    }
+
+    .levels-grid {
+      display: flex;
+      gap: 0.6rem;
+      font-size: 0.72rem;
+      font-family: 'JetBrains Mono', monospace;
+    }
+
+    .lvl-res {
+      color: var(--red);
+    }
+
+    .lvl-piv {
+      color: var(--cyan);
+    }
+
+    .lvl-sup {
+      color: var(--green);
+    }
+
+    /* TradingView Section */
+    .chart-section {
+      margin-top: 1.75rem;
+    }
+
+    .chart-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(450px, 1fr));
+      gap: 1.25rem;
+    }
+
+    .chart-card {
+      background: var(--card-bg);
+      border: 1px solid var(--card-border);
+      border-radius: 12px;
+      overflow: hidden;
+      height: 380px;
+    }
+
+    /* Footer */
+    footer {
+      margin-top: 3rem;
+      border-top: 1px solid var(--card-border);
+      padding: 1.5rem 1.75rem;
+      text-align: center;
+      font-size: 0.78rem;
+      color: var(--text-muted);
+    }
+
+    .btn-refresh {
+      background: rgba(255, 255, 255, 0.08);
+      border: 1px solid var(--card-border);
+      color: var(--text-main);
+      padding: 0.45rem 0.9rem;
+      border-radius: 6px;
+      cursor: pointer;
+      font-size: 0.78rem;
+      font-family: 'JetBrains Mono', monospace;
+      transition: all 0.2s;
+    }
+
+    .btn-refresh:hover {
+      background: var(--cyan);
+      color: #000;
+      border-color: var(--cyan);
+    }
+  </style>
+</head>
+<body>
+
+  <header>
+    <div class="brand">
+      <div class="brand-logo">PT</div>
+      <div>
+        <h1>Pulse<span>Trade</span> Radar</h1>
+      </div>
+    </div>
+
+    <div class="status-badge-container">
+      <div class="live-indicator">
+        <div class="pulse-dot"></div>
+        <span id="market-status-text">MONITORING US & CA MARKETS</span>
+      </div>
+      <div class="timestamp" id="last-updated-clock">Updated: Just now</div>
+      <button class="btn-refresh" onclick="fetchMarketData()">↻ Refresh</button>
+    </div>
+  </header>
+
+  <div class="container">
+
+    <!-- Top Ticker Ribbon -->
+    <div class="ticker-bar" id="ticker-ribbon">
+      <!-- Injected via JavaScript -->
+    </div>
+
+    <!-- Top Grid: Volatility Radar & Scalp Alert Feed -->
+    <div class="top-grid">
+      <!-- Live Alerts -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 10V3L4 14h7v7l9-11h-7z" />
+            </svg>
+            Swift Movement & Revival Entry Feed (Scalp Signals)
+          </div>
+          <span style="font-size: 0.75rem; color: var(--cyan); font-family: 'JetBrains Mono', monospace;">5-Min Cron Sync</span>
+        </div>
+        <div class="alerts-feed" id="alerts-container">
+          <!-- Injected via JS -->
+        </div>
+      </div>
+
+      <!-- Volatility Meter -->
+      <div class="panel">
+        <div class="panel-header">
+          <div class="panel-title">
+            <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 19v-6a2 2 0 00-2-2H5a2 2 0 00-2 2v6a2 2 0 002 2h2a2 2 0 002-2zm0 0V9a2 2 0 012-2h2a2 2 0 012 2v10m-6 0a2 2 0 002 2h2a2 2 0 002-2m0 0V5a2 2 0 012-2h2a2 2 0 012 2v14a2 2 0 01-2 2h-2a2 2 0 01-2-2z" />
+            </svg>
+            Volatility & Regime Radar
+          </div>
+        </div>
+        <div class="vol-box">
+          <div class="vix-display">
+            <span class="vix-val" id="vix-val">17.85</span>
+            <span class="vix-status" id="vix-status">VIX Elevated (+4.2%)</span>
+          </div>
+          <div class="vol-meter-bg">
+            <div class="vol-meter-fill" id="vix-meter"></div>
+          </div>
+          <div class="vol-summary-row">
+            <span>Low (0-15)</span>
+            <span style="color: var(--gold); font-weight: 600;">Active Scalp Regime (15-22)</span>
+            <span>Extreme (&gt;22)</span>
+          </div>
+          <div style="font-size: 0.78rem; line-height: 1.4; color: var(--text-muted); background: rgba(0,0,0,0.25); padding: 0.6rem; border-radius: 6px;">
+            ⚡ <strong>Strategy Note:</strong> High volatility expansion detected. Favour quick momentum thrust scalps off 5-min VWAP pivots.
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Main Scalp Matrix Table -->
+    <div class="panel">
+      <div class="panel-header">
+        <div class="panel-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 10h18M3 14h18m-9-4v8m-7 0h14a2 2 0 002-2V6a2 2 0 00-2-2H5a2 2 0 00-2 2v8a2 2 0 002 2z" />
+          </svg>
+          US & Canadian Indices & Futures Scalp Matrix
+        </div>
+        <div style="font-size: 0.75rem; color: var(--text-muted); font-family: 'JetBrains Mono', monospace;">
+          Excluding Commodities • Focus on High Beta Indices
+        </div>
+      </div>
+
+      <div class="table-container">
+        <table>
+          <thead>
+            <tr>
+              <th>Symbol & Market</th>
+              <th>Last Price</th>
+              <th>Change</th>
+              <th>Setup Status</th>
+              <th>Momentum Velocity</th>
+              <th>Scalp Entry Bias</th>
+              <th>Key Levels (R / Pivot / S)</th>
+              <th>Revival Score</th>
+            </tr>
+          </thead>
+          <tbody id="matrix-tbody">
+            <!-- Injected via JavaScript -->
+          </tbody>
+        </table>
+      </div>
+    </div>
+
+    <!-- Real-Time TradingView Live Charts (US S&P 500, Nasdaq 100 & TSX) -->
+    <div class="chart-section">
+      <div class="panel-header" style="margin-bottom: 1rem;">
+        <div class="panel-title">
+          <svg fill="none" stroke="currentColor" viewBox="0 0 24 24">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M7 12l3-3 3 3 4-4M8 21l4-4 4 4M3 4h18M4 4h16v12a1 1 0 01-1 1H5a1 1 0 01-1-1V4z" />
+          </svg>
+          Live TradingView Streaming Charts (No Delay)
+        </div>
+      </div>
+
+      <div class="chart-grid">
+        <!-- Chart 1: S&P 500 Futures / SPY -->
+        <div class="chart-card">
+          <iframe 
+            src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_es&symbol=CME_MINI%3AES1!&interval=5&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=f1f3f6&studies=%5B%5D&theme=dark&style=1&timezone=exchange" 
+            style="width: 100%; height: 100%; border: none;">
+          </iframe>
+        </div>
+        <!-- Chart 2: Nasdaq 100 Futures / QQQ -->
+        <div class="chart-card">
+          <iframe 
+            src="https://s.tradingview.com/widgetembed/?frameElementId=tradingview_nq&symbol=CME_MINI%3ANQ1!&interval=5&hidesidetoolbar=1&symboledit=0&saveimage=0&toolbarbg=f1f3f6&studies=%5B%5D&theme=dark&style=1&timezone=exchange" 
+            style="width: 100%; height: 100%; border: none;">
+          </iframe>
+        </div>
+      </div>
+    </div>
+
+  </div>
+
+  <footer>
+    <p>PulseTrade Radar • Designed for High-Frequency Scalping & Fast Revival Setups across US & Canada</p>
+    <p style="margin-top: 0.4rem; font-size: 0.72rem; color: #64748b;">Powered by Antigravity Automation & GitHub Pages • Syncs every 5 minutes round the clock</p>
+  </footer>
+
+  <script>
+    async function fetchMarketData() {
+      try {
+        const response = await fetch('data/market_data.json?t=' + new Date().getTime());
+        if (!response.ok) throw new Error('Data fetch failed');
+        const data = await response.json();
+        renderDashboard(data);
+      } catch (err) {
+        console.warn('Using local fallback state or waiting for next poll:', err);
+      }
+    }
+
+    function renderDashboard(data) {
+      if (data.last_updated) {
+        const date = new Date(data.last_updated);
+        document.getElementById('last-updated-clock').textContent = 'Updated: ' + date.toLocaleTimeString();
+      }
+
+      // Render Tickers Ribbon
+      const ribbon = document.getElementById('ticker-ribbon');
+      ribbon.innerHTML = '';
+      data.indices_and_futures.slice(0, 6).forEach(item => {
+        const isPos = !item.change_pct.startsWith('-');
+        const card = document.createElement('div');
+        card.className = 'ticker-card';
+        card.innerHTML = `
+          <div class="ticker-top">
+            <span class="ticker-symbol">${item.symbol}</span>
+            <span class="ticker-region">${item.market}</span>
+          </div>
+          <div class="ticker-price">${typeof item.price === 'number' ? item.price.toLocaleString() : item.price}</div>
+          <div class="ticker-change ${isPos ? 'change-pos' : 'change-neg'}">
+            ${isPos ? '▲' : '▼'} ${item.change_pts} (${item.change_pct})
+          </div>
+        `;
+        ribbon.appendChild(card);
+      });
+
+      // Render Alerts
+      const alertsContainer = document.getElementById('alerts-container');
+      alertsContainer.innerHTML = '';
+      (data.scalp_alerts || []).forEach(alert => {
+        const item = document.createElement('div');
+        item.className = `alert-item ${alert.badge || ''}`;
+        item.innerHTML = `
+          <span class="alert-badge badge-${alert.badge || 'info'}">${alert.type}</span>
+          <div class="alert-body">
+            <div class="alert-headline">
+              <span>${alert.ticker}</span>
+              <span class="alert-time">${alert.timestamp}</span>
+            </div>
+            <div class="alert-desc">${alert.message}</div>
+          </div>
+        `;
+        alertsContainer.appendChild(item);
+      });
+
+      // Volatility
+      if (data.market_summary && data.market_summary.vix_reading) {
+        document.getElementById('vix-val').textContent = data.market_summary.vix_reading;
+        document.getElementById('vix-status').textContent = data.market_summary.vix_trend;
+        const pct = Math.min(Math.max((data.market_summary.vix_reading / 35) * 100, 10), 100);
+        document.getElementById('vix-meter').style.width = pct + '%';
+      }
+
+      // Render Matrix Table
+      const tbody = document.getElementById('matrix-tbody');
+      tbody.innerHTML = '';
+      data.indices_and_futures.forEach(item => {
+        const isPos = !item.change_pct.startsWith('-');
+        const row = document.createElement('tr');
+        
+        let statusTag = 'tag-breakout';
+        if (item.status.toLowerCase().includes('revival')) statusTag = 'tag-revival';
+        else if (item.status.toLowerCase().includes('swift')) statusTag = 'tag-swift';
+
+        row.innerHTML = `
+          <td>
+            <div class="sym-cell">
+              <span class="sym-code">${item.symbol}</span>
+              <span class="sym-name">${item.display} (${item.market})</span>
+            </div>
+          </td>
+          <td class="mono-cell">${typeof item.price === 'number' ? item.price.toLocaleString() : item.price}</td>
+          <td class="mono-cell ${isPos ? 'change-pos' : 'change-neg'}">
+            ${item.change_pct}
+          </td>
+          <td><span class="tag ${statusTag}">${item.status}</span></td>
+          <td style="font-size: 0.8rem; font-weight: 500;">${item.momentum}</td>
+          <td style="font-size: 0.8rem; color: #cbd5e1;">${item.scalp_bias}</td>
+          <td>
+            <div class="levels-grid">
+              <span class="lvl-res">R: ${item.key_levels.resistance}</span>
+              <span class="lvl-piv">P: ${item.key_levels.pivot}</span>
+              <span class="lvl-sup">S: ${item.key_levels.support}</span>
+            </div>
+          </td>
+          <td>
+            <div style="display: flex; align-items: center; gap: 0.5rem;">
+              <span class="mono-cell" style="color: ${item.revival_score >= 80 ? 'var(--green)' : 'var(--cyan)'};">${item.revival_score}/100</span>
+            </div>
+          </td>
+        `;
+        tbody.appendChild(row);
+      });
+    }
+
+    // Initial load and periodic polling every 5 seconds
+    fetchMarketData();
+    setInterval(fetchMarketData, 5000);
+  </script>
+</body>
+</html>
