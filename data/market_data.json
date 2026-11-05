@@ -1,219 +1,219 @@
 {
-  "last_updated": "2026-11-05T06:43:38.591671+00:00",
+  "last_updated": "2026-11-05T06:48:17.156855+00:00",
   "status": "Active - Round The Clock Scalp Radar",
   "market_summary": {
-    "us_status": "Mega-Cap Tech Revival & Russell Breakout Surge / Broad Equity High-Shelf Expansion",
+    "us_status": "Mega-Cap Tech Revival Acceleration & Russell Breakout Surge / Broad Equity High-Shelf Expansion",
     "canada_status": "TSX 60 & SXF Futures Sustained Breakout Run Driven by Financials & Energy Flows",
     "market_sentiment": "High Risk-On Beta Expansion / Tech Oversold Dip Revivals Leading Scalp Flow",
-    "vix_reading": 16.42,
-    "vix_trend": "Vol Crush (-14.48%) - Post-Election Implied Vol Drain Clears Friction for Index Scalps"
+    "vix_reading": 16.18,
+    "vix_trend": "Vol Crush (-15.73%) - Sustained Implied Volatility Drain Clears Friction for Index Scalps"
   },
   "indices_and_futures": [
     {
       "symbol": "ES=F",
       "display": "E-mini S&P 500 Futures",
       "market": "US Futures",
-      "price": 7714.5,
-      "change_pts": "+116.75",
-      "change_pct": "+1.54%",
+      "price": 7728.5,
+      "change_pts": "+130.75",
+      "change_pct": "+1.72%",
       "volatility": "Elevated-High",
-      "status": "Breakout Re-Test",
-      "momentum": "Systematic Trend-Following & Delta Absorption",
-      "scalp_bias": "Long continuation scalp on shallow 5m dips defending 7,706-7,712 VWAP shelf; primary scalp targets 7,735.00 and 7,755.00; invalidation cut on 5m close below 7,694.00",
+      "status": "Breakout High-Shelf Extension",
+      "momentum": "Aggressive Passive Delta Bid & Systematic Vol Rebalancing",
+      "scalp_bias": "Long scalp continuation on pullbacks holding 7,716-7,722 VWAP support shelf; immediate scalp expansion targets 7,748.00 and 7,768.00; risk stop on 5m close below 7,705.00",
       "key_levels": {
-        "resistance": 7755.0,
-        "pivot": 7712.0,
-        "support": 7694.0
+        "resistance": 7768.0,
+        "pivot": 7722.0,
+        "support": 7705.0
       },
-      "revival_score": 95
+      "revival_score": 96
     },
     {
       "symbol": "NQ=F",
       "display": "E-mini Nasdaq 100 Futures",
       "market": "US Futures",
-      "price": 28382.5,
-      "change_pts": "+327.00",
-      "change_pct": "+1.17%",
+      "price": 28446.5,
+      "change_pts": "+391.00",
+      "change_pct": "+1.39%",
       "volatility": "High",
-      "status": "Oversold Dip Revival",
-      "momentum": "Semiconductor & Mega-Cap Cloud Dip Rebound",
-      "scalp_bias": "High-probability revival scalp triggered as price absorbs earnings dip and reclaims 28,350 VWAP pivot; primary scalp targets 28,480 and 28,600; invalidation stop below 28,260 support shelf",
+      "status": "Oversold Revival Expansion",
+      "momentum": "Mega-Cap Tech Short Squeeze & Semiconductor Dip Bid",
+      "scalp_bias": "High-conviction revival bounce scalp holding above 28,390-28,410 pivot; upside targets 28,540 and 28,680; invalidation stop below 28,310 support shelf",
       "key_levels": {
-        "resistance": 28600.0,
-        "pivot": 28350.0,
-        "support": 28260.0
+        "resistance": 28680.0,
+        "pivot": 28410.0,
+        "support": 28310.0
       },
-      "revival_score": 97
+      "revival_score": 98
     },
     {
       "symbol": "YM=F",
       "display": "E-mini Dow Jones Futures",
       "market": "US Futures",
-      "price": 53622.0,
-      "change_pts": "+1407.00",
-      "change_pct": "+2.69%",
+      "price": 53684.0,
+      "change_pts": "+1469.00",
+      "change_pct": "+2.81%",
       "volatility": "High",
-      "status": "High-Shelf Bull Flag",
-      "momentum": "Cyclical, Industrial & Financial Sector Inflow Surge",
-      "scalp_bias": "Bullish high-shelf flag scalp defending 53,580-53,620 shelf; runner targets 53,820 and 53,950; invalidation stop under 53,480",
+      "status": "High-Shelf Consolidation",
+      "momentum": "Industrial, Infrastructure & Bank Sector Inflow Wave",
+      "scalp_bias": "Bullish flag breakout scalp above 53,680 targeting 53,880 and 54,050; stop loss protection strictly placed under 53,540",
       "key_levels": {
-        "resistance": 53950.0,
-        "pivot": 53620.0,
-        "support": 53480.0
+        "resistance": 54050.0,
+        "pivot": 53680.0,
+        "support": 53540.0
       },
-      "revival_score": 92
+      "revival_score": 93
     },
     {
       "symbol": "RTY=F",
       "display": "E-mini Russell 2000 Futures",
       "market": "US Futures",
-      "price": 2878.4,
-      "change_pts": "+46.60",
-      "change_pct": "+1.65%",
+      "price": 2886.8,
+      "change_pts": "+55.00",
+      "change_pct": "+1.94%",
       "volatility": "Extreme",
-      "status": "Small-Cap Breakout Extension",
-      "momentum": "High-Beta Breadth Expansion & Short Squeeze Continuation",
-      "scalp_bias": "Aggressive scalp continuation on 5m pullbacks holding 2,868-2,872 VWAP zone; upside surge targets 2,905 and 2,925; risk cutoff below 2,855",
+      "status": "Small-Cap Runaway Breakout",
+      "momentum": "Broad Market Beta Expansion & Short-Covering Squeeze",
+      "scalp_bias": "High-velocity momentum scalp riding 5m micro-dips into 2,878-2,882; surge targets 2,912 and 2,935; tight risk cutoff below 2,866",
       "key_levels": {
-        "resistance": 2925.0,
-        "pivot": 2872.0,
-        "support": 2855.0
+        "resistance": 2935.0,
+        "pivot": 2882.0,
+        "support": 2866.0
       },
-      "revival_score": 98
+      "revival_score": 99
     },
     {
       "symbol": "SXF",
       "display": "S&P/TSX 60 Index Futures",
       "market": "Canada Futures (Montr\u00e9al)",
-      "price": 2172.4,
-      "change_pts": "+40.80",
-      "change_pct": "+1.91%",
+      "price": 2178.6,
+      "change_pts": "+47.00",
+      "change_pct": "+2.20%",
       "volatility": "Moderate-High",
-      "status": "Breakout Continuation",
-      "momentum": "Canadian Banking & Energy Capital Inflow",
-      "scalp_bias": "Trend long scalp on shallow intraday retests of 2,165-2,168 pivot zone; profit expansion targets 2,188 and 2,205; risk stop under 2,152",
+      "status": "All-Time High Breakout",
+      "momentum": "Canadian Big 5 Banks & Energy Institutional Outflow Capture",
+      "scalp_bias": "Trend long scalp re-entering on dips to 2,172-2,174 VWAP anchor; scalp expansion targets 2,195 and 2,215; stop under 2,160",
       "key_levels": {
-        "resistance": 2205.0,
-        "pivot": 2168.0,
-        "support": 2152.0
+        "resistance": 2215.0,
+        "pivot": 2174.0,
+        "support": 2160.0
       },
-      "revival_score": 94
+      "revival_score": 95
     },
     {
       "symbol": "XIU.TO",
       "display": "iShares S&P/TSX 60 (Canada)",
       "market": "Canada (TSX)",
-      "price": 55.18,
-      "change_pts": "+0.94",
-      "change_pct": "+1.73%",
+      "price": 55.34,
+      "change_pts": "+1.10",
+      "change_pct": "+2.03%",
       "volatility": "Moderate",
-      "status": "Benchmark Trend Thrust",
-      "momentum": "Broad TSX 60 Constituent Bid & Resource Inflow",
-      "scalp_bias": "Long continuation scalp holding above 54.90-54.95 CAD anchor; scalp targets 55.75 and 56.30; invalidation below 54.55",
+      "status": "Benchmark High Extension",
+      "momentum": "TSX 60 Broad-Index Basket Accumulation",
+      "scalp_bias": "Continuation scalp holding above 55.05-55.15 CAD pivot; profit targets 55.95 and 56.50; invalidation cut below 54.80",
       "key_levels": {
-        "resistance": 56.3,
-        "pivot": 54.95,
-        "support": 54.55
+        "resistance": 56.5,
+        "pivot": 55.15,
+        "support": 54.8
       },
-      "revival_score": 93
+      "revival_score": 94
     },
     {
       "symbol": "SPY",
       "display": "SPDR S&P 500 ETF Trust",
       "market": "US Index ETF",
-      "price": 768.18,
-      "change_pts": "+13.82",
-      "change_pct": "+1.83%",
+      "price": 769.85,
+      "change_pts": "+15.49",
+      "change_pct": "+2.05%",
       "volatility": "High",
-      "status": "Breakout Re-Test",
-      "momentum": "Institutional Macro Flow & ETF Liquidity Bid",
-      "scalp_bias": "Long call scalp on shallow dips holding 766.00-767.20 VWAP zone; scalp expansion targets 772.50 and 776.00; risk cutoff below 763.80",
+      "status": "Breakout Shelf Extension",
+      "momentum": "ETF Liquidity Wave & Institutional Index Basket Inflow",
+      "scalp_bias": "Long call scalp on shallow 2m dips holding 768.00-768.80 VWAP band; scalp runner targets 774.20 and 778.00; stop below 765.20",
       "key_levels": {
-        "resistance": 776.0,
-        "pivot": 767.0,
-        "support": 763.8
+        "resistance": 778.0,
+        "pivot": 768.5,
+        "support": 765.2
       },
-      "revival_score": 95
+      "revival_score": 96
     },
     {
       "symbol": "QQQ",
       "display": "Invesco QQQ Trust (Nasdaq 100)",
       "market": "US Index ETF",
-      "price": 694.07,
-      "change_pts": "+8.72",
-      "change_pct": "+1.28%",
+      "price": 696.42,
+      "change_pts": "+11.07",
+      "change_pct": "+1.62%",
       "volatility": "High",
       "status": "Oversold Revival Bounce",
-      "momentum": "AI Ecosystem & Large-Cap Tech Rebound",
-      "scalp_bias": "High-probability revival bounce scalp as 692.80 support shelf holds; immediate scalp targets 699.50 and 704.80; invalidation stop under 690.00",
+      "momentum": "Tech Beta Recovery & Large-Cap Software/Hardware Thrust",
+      "scalp_bias": "High-conviction revival bounce scalp holding above $694.50; fast targets 701.80 and 707.50; invalidation stop under $691.80",
       "key_levels": {
-        "resistance": 704.8,
-        "pivot": 693.8,
-        "support": 690.0
+        "resistance": 707.5,
+        "pivot": 694.5,
+        "support": 691.8
       },
-      "revival_score": 97
+      "revival_score": 98
     },
     {
       "symbol": "VIX",
       "display": "Cboe Volatility Index",
       "market": "US Volatility",
-      "price": 16.42,
-      "change_pts": "-2.78",
-      "change_pct": "-14.48%",
+      "price": 16.18,
+      "change_pts": "-3.02",
+      "change_pct": "-15.73%",
       "volatility": "Compressing",
       "status": "Volatility Crush Regime",
-      "momentum": "Persistent Implied Volatility Drain",
-      "scalp_bias": "Volatility collapse clears hedging overhead; institutional tailwind favors aggressive index dip scalping; fade brief VIX spikes towards 17.10-17.30",
+      "momentum": "Systematic Post-Election Vol Implosion",
+      "scalp_bias": "Severe volatility crush confirms dealer positive gamma pinning; dip scalps on equity indices possess maximal reward:risk; fade short-term VIX pops near 16.90",
       "key_levels": {
-        "resistance": 17.3,
-        "pivot": 16.5,
-        "support": 15.1
+        "resistance": 16.9,
+        "pivot": 16.2,
+        "support": 14.8
       },
-      "revival_score": 75
+      "revival_score": 74
     }
   ],
   "scalp_alerts": [
     {
       "timestamp": "Just now",
-      "type": "OVERSOLD TECH REVIVAL BOUNCE",
+      "type": "OVERSOLD TECH REVIVAL EXPANSION",
       "ticker": "NQ=F & QQQ (Nasdaq 100)",
       "badge": "success",
-      "message": "NQ=F absorbs post-earnings tech shakeout and springs off 28,260 support, reclaiming 28,350 VWAP pivot at 28,382.50 (+1.17%). QQQ rebound off $692.80 validates a 97/100 revival bounce setup; scalp targets 28,480 and 28,600."
+      "message": "NQ=F powers through 28,440 (+1.39%) with QQQ piercing $696.40 (+1.62%). The 98/100 revival bounce is confirmed by heavy delta absorption on semiconductor and cloud names; scalpers targeting 28,540 and 28,680."
     },
     {
       "timestamp": "2 mins ago",
-      "type": "SMALL-CAP BREAKOUT SURGE",
+      "type": "SMALL-CAP RUNAWAY BREAKOUT",
       "ticker": "RTY=F (Russell 2000 Futures)",
       "badge": "success",
-      "message": "Russell 2000 futures print 2,878.40 (+1.65%) posting industry-leading 98/100 revival velocity. Intense short squeeze firmly holds 2,868-2,872 VWAP shelf; upside continuation scalp targets 2,905 and 2,925."
+      "message": "Russell 2000 futures print 2,886.80 (+1.94%) with revival score at peak 99/100. Relentless short squeeze extends above 2,882 VWAP; upside momentum scalp targets 2,912 and 2,935."
     },
     {
       "timestamp": "5 mins ago",
-      "type": "S&P 500 BREAKOUT SHELF RE-TEST",
+      "type": "S&P 500 BREAKOUT SHELF EXPANSION",
       "ticker": "ES=F & SPY (S&P 500)",
       "badge": "success",
-      "message": "E-mini S&P 500 futures trade firmly at 7,714.50 (+1.54%) as SPY holds $768.18 (+1.83%). Order book indicates robust institutional delta absorption above 7,712 pivot; quick continuation scalp targets 7,735 and 7,755."
+      "message": "E-mini S&P 500 futures extend to 7,728.50 (+1.72%) with SPY printing $769.85 (+2.05%). Clean ascending flag above 7,722 pivot keeps directional scalp path open towards 7,748 and 7,768."
     },
     {
-      "timestamp": "8 mins ago",
+      "timestamp": "7 mins ago",
       "type": "CANADIAN BENCHMARK EXPANSION",
       "ticker": "SXF & XIU.TO (S&P/TSX 60)",
       "badge": "info",
-      "message": "Montr\u00e9al TSX 60 futures (SXF) advance to 2,172.40 (+1.91%) while XIU trades at 55.18 CAD (+1.73%). Heavy capital inflows into Canadian major banks and energy producers drive smooth breakout above 2,168 pivot."
+      "message": "Montr\u00e9al TSX 60 futures (SXF) advance to 2,178.60 (+2.20%) while XIU trades at 55.34 CAD (+2.03%). High-volume banking and resource inflows cement all-time high breakout continuation above 2,174 pivot."
     },
     {
-      "timestamp": "11 mins ago",
+      "timestamp": "10 mins ago",
       "type": "DOW HIGH-SHELF ACCUMULATION",
       "ticker": "YM=F (Dow Jones Futures)",
       "badge": "warning",
-      "message": "Dow futures hold historically elevated ground at 53,622 (+2.69%). Intraday high-shelf bull flag consolidates cleanly above 53,580 with sustained industrial/banking bid; runner targets 53,820 and 53,950."
+      "message": "Dow futures hold near session highs at 53,684 (+2.81%). Intraday high-shelf bull flag consolidates cleanly above 53,620 with persistent cyclical bid; runner targets 53,880 and 54,050."
     },
     {
-      "timestamp": "14 mins ago",
+      "timestamp": "12 mins ago",
       "type": "VOLATILITY CRUSH DEEPENS",
       "ticker": "VIX (Cboe Volatility Index)",
       "badge": "warning",
-      "message": "VIX compresses to 16.42 (-14.48%). Systematic options unwind post-election clears dealer gamma drags, unlocking frictionless upward glidepath for benchmark index dip scalping."
+      "message": "VIX drops to 16.18 (-15.73%). Broad implied volatility drain removes overhead hedging pressure, accelerating positive-gamma dealer chasing on benchmark index dips."
     }
   ]
 }
