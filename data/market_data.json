@@ -1,5 +1,5 @@
 {
-  "last_updated": "2026-11-05T06:05:00.000000+00:00",
+  "last_updated": "2026-11-05T06:06:35.097872+00:00",
   "status": "Active - Live Scalp & Momentum Radar",
   "market_summary": {
     "us_status": "Global Overnight & US Index Futures Active",
@@ -102,7 +102,7 @@
     {
       "symbol": "SXF",
       "display": "S&P/TSX 60 Index Futures",
-      "market": "Canada Futures (Montréal)",
+      "market": "Canada Futures (Montr\u00e9al)",
       "price": 1431.5,
       "change_pts": "+14.20",
       "change_pct": "+1.00%",
@@ -192,7 +192,7 @@
       "type": "CANADIAN BREAKOUT",
       "ticker": "SXF & XIU.TO (S&P/TSX 60)",
       "badge": "info",
-      "message": "Montréal TSX 60 futures (SXF) expanding above 1426 pivot to 1431.5 (+1.00%), supported by broad Canadian equity inflows."
+      "message": "Montr\u00e9al TSX 60 futures (SXF) expanding above 1426 pivot to 1431.5 (+1.00%), supported by broad Canadian equity inflows."
     },
     {
       "timestamp": "7 mins ago",
